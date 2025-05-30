@@ -1,0 +1,177 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-lg);
+  
+  & .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 35rem;
+  }
+    
+  & .hero__title {
+    color: var(--color-text);
+    font-size: var(--font-xxxl);
+  }
+    
+  & .hero__highlight {
+    color: var(--color-primary);
+    position: relative;
+    white-space: nowrap;
+    font-size: var(--font-xxxl);
+    margin-bottom: var(--spacing-5xl);
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-background);
+      border-left: 2px solid var(--color-text);
+      animation: typing 8s infinite;
+    }
+    
+    &::after {
+      content: "frontend developer";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: max-content;
+      animation: changeText 8s infinite;
+    }
+  }
+    
+  & .hero__description {
+    color: var(--color-secondary);
+    line-height: var(--spacing-2xl);
+  }
+    
+  & .hero__button {
+    width: 10rem;
+    height: var(--spacing-2xl);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-primary);
+    color: var(--color-text);
+    cursor: pointer;
+    
+    &:hover {
+      background-color: transparent;
+      box-shadow: 0 0 10px var(--color-primary);
+      color: var(--color-primary);
+    }
+  }
+    
+  & .hero__image-container {
+    position: relative; /* Create a positioning context */
+  }
+    
+  & .hero__image {
+    position: relative; /* Base image positioning */
+    z-index: 1; /* Ensure it's above the background, but below decorative elements */
+    
+    &:hover {
+      box-shadow: 0 0 25px var(--color-primary);
+    }
+  }
+       
+  & .hero__decor--dots {
+    position: absolute; /* Position absolutely */
+    top: var(--spacing-2xl); /* Position the square elements in the top left area */
+    left: var(--spacing-md);
+    z-index: 2; /* Place above the main image */
+  }
+    
+  & .hero__decor--square {
+    position: absolute; /* Position absolutely */
+    bottom: 250px; /* Position the dots in the bottom right area */
+    right: 10px;
+    z-index: 2; /* Place above the main image */
+  }
+    
+  & .hero__status-badge {
+    padding: var(--spacing-xs);
+    border: 1px solid var(--color-text);
+    position: absolute;
+    left: var(--spacing-xl);
+    color: var(--color-text);
+  }
+
+  & .emoji-dark {
+    display: none;
+  }
+
+  & .emoji-light {
+    display: inline;
+  }
+  
+  @keyframes typing {
+    /* Frontend typing */
+    0% { width: 100%; }
+    15% { width: 0; }
+    
+    /* Pause at fully visible frontend */
+    30% { width: 0; }
+    
+    /* Erase frontend */
+    35% { width: 0; }
+    45% { width: 100%; }
+    
+    /* Switch content and show backend */
+    45.1% { width: 100%; }
+    46% { width: 100%; }
+    60% { width: 0; }
+    
+    /* Pause at fully visible backend */
+    75% { width: 0; }
+    
+    /* Erase backend */
+    80% { width: 0; }
+    90% { width: 100%; }
+    
+    /* Reset for next cycle */
+    100% { width: 100%; }
+  }
+  
+  @keyframes changeText {
+    0%, 45% {
+      content: "frontend developer";
+    }
+    45.1%, 90% {
+      content: "backend developer";
+    }
+    90.1%, 100% {
+      content: "frontend developer";
+    }
+  }
+}
+
+
+@media (max-width: 64rem) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    
+  }
+}
+
+
+@media (max-width: 64rem) {
+  .hero__decor--square {
+    display: none;
+    
+  }
+}
+
+@media (max-width: 64rem) {
+  .hero__image {
+    margin-top: var(--spacing-4xl);
+  }
+}
+
+

@@ -1,0 +1,161 @@
+.nav {
+  display: flex;
+  padding: var(--spacing-lg);
+  justify-content: space-between;
+  font-size: var(--font-l);
+
+  & .nav__logo-container {
+    display: flex;
+    gap: var(--spacing-xxs);
+  }
+  
+  & .nav__logo {
+    color: var(--color-text);
+    
+  }
+
+  & .nav__logo-link {
+    text-decoration: none;
+  }
+  
+  & .nav__logo-icon {
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+    filter: var(--dark-image-filter);
+  }
+  
+  & .nav__list {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+  }
+  
+  & .nav__link {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.3s;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 2px;
+      background: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  
+  .nav__hash {
+    color: var(--color-primary);
+  }
+
+  & .nav__theme {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  & .nav__moon {
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  & .nav__sun {
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  & .nav__sun {
+    display: none;
+  }
+  
+  & .light-mode .nav__moon {
+    display: none;
+  }
+  
+  & .light-mode .nav__sun {
+    display: block;
+  }
+  
+  & .nav__sun path {
+    fill: var(--sun-color);
+  }
+
+  & .nav__moon path {
+    fill: var(--moon-color);
+  }
+
+  & .nav__hamburger {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer; 
+    background-color: var(--color-background);
+    color: var(--color-background);
+  }
+
+  & .nav__cross {
+    display: none; 
+  }
+
+  @media (min-width: 64rem) {
+    .nav__hamburger,
+    .nav__cross {
+      display: none; 
+    }
+  }
+
+  @media (max-width: 64rem) {
+    .nav__hamburger {
+      display: block; 
+    }
+  
+    
+    .nav__list {
+      display: none; 
+    }
+  
+    /* Show the list when active */
+    .nav__list--active {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100vw;
+      height: calc(100vh - 4rem);
+      list-style: none;
+      color: black;
+      background-color: var(--color-background);
+      font-size: 2rem;
+      padding-top: 2rem;
+      padding-left: 0.1rem;
+      position: fixed;
+      top: 5rem;
+      left: 0;
+      font-size: 5rem;
+      z-index: 100;
+    }
+  
+    
+    .nav__list--active .nav__hamburger {
+      display: none;
+    }
+  
+    .nav__list--active .nav__cross {
+      display: block; 
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

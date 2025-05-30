@@ -1,0 +1,104 @@
+@import url("/styles/header.css");
+@import url("/styles/hero.css");
+@import url("/styles/quote.css");
+@import url("/styles/footer.css");
+@import url("/styles/grid.css");
+@import url("/styles/block.css");
+@import url("/styles/row.css");
+@import url("/styles/facts.css");
+@import url("/styles/form.css");
+@import url("/styles/detail.css");
+@import url("/styles/modal.css");
+
+
+
+
+
+
+
+:root {
+  /* Colors */
+  --color-primary: #c778dd;
+  --color-secondary: #abb2bf;
+  --color-background: #282c33;
+  --color-text: #fffefe; 
+  --sun-color: #d2691e;
+  --moon-color: #fffefe; 
+  --dark-image-filter: brightness(100);
+  --status-emoji: '🟪';
+  --color-succes:  #00ff11; 
+
+  /* Font Sizes */
+  --font-xs: 0.75rem;
+  --font-s: 0.875rem;
+  --font-m: 1rem;
+  --font-l: 1.25rem;
+  --font-xl: 1.5rem;
+  --font-xxl: 2rem;
+  --font-xxxl: 3rem;
+
+  /* Spacing (Padding & Margin) */
+  --spacing-xxs: 0.5rem;
+  --spacing-xs: 0.75rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 3.5rem;
+  --spacing-4xl: 4rem;
+  --spacing-5xl: 5rem;
+  --spacing-6xl: 6rem;
+  --spacing-7xl: 7rem;
+  --spacing-8xl: 8rem;
+  --spacing-9xl: 9rem;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: "Fira Code", monospace;
+  transition: 0.4s ease-in-out;
+}
+
+.main {
+  width: 100%;
+  max-width: 85rem;
+  margin: 0 auto;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
+.light-mode {
+  --color-primary: #d2691e;  /* Warm Brown */
+--color-secondary: #b56576;  /* Soft Mauve */
+--color-background: #f8ede3;  /* Light Cream */
+--color-text: #4a403a;  /* Deep Brown */
+--dark-image-filter: brightness(0);
+--status-emoji: '🟧';
+  
+}
+
+
+.light-mode .emoji-light {
+  display: none;
+}
+
+.light-mode .emoji-dark {
+  display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

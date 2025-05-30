@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Portfolio</title>
+</head>
+<body class="light-mode">
+    <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+    <main class="main" id="main-content">
+        <header class="header" role="banner">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav__logo-container">
+                    <img src="/images/logo-header.png" alt="Eros logo" class="nav__logo-icon" width="40" height="40">
+                    <a class="nav__logo-link" href="/index.html" aria-label="Home"><span class="nav__logo">Eros</span></a>
+                </div>
+                
+                <div class="nav__theme">
+                    <svg class="nav__moon" id="theme" width="21" height="21" viewBox="0 0 21 21"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img" aria-label="Dark mode">
+                    <path
+                        d="M10.553 19.2499C13.7848 19.2499 16.7487 17.4781 18.2923 14.6247C18.4201 14.3903 18.3978 14.1037 18.2395 13.8917C18.0812 13.6796 17.8083 13.5777 17.5535 13.6357C17.0259 13.7509 16.4941 13.808 15.9706 13.808C11.8639 13.808 8.52147 10.4509 8.52147 6.32425C8.52147 5.07847 8.83395 3.84584 9.4226 2.75507C9.5504 2.52066 9.52814 2.23408 9.36984 2.02203C9.21154 1.80998 8.93863 1.70809 8.68388 1.76609C4.66543 2.63995 1.75 6.27124 1.75 10.4062C1.75 15.2832 5.69838 19.25 10.5529 19.25L10.553 19.2499Z" />
+                    </svg>
+    
+                    <svg class="nav__sun" id="disable" width="19" height="19" viewBox="0 0 19 19"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img" aria-label="Light mode">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.4583 9.49967C13.4583 11.6862 11.6862 13.4583 9.49967 13.4583C7.31355 13.4583 5.54163 11.6862 5.54163 9.49967C5.54163 7.31355 7.3137 5.54163 9.49967 5.54163C11.6862 5.54163 13.4583 7.3137 13.4583 9.49967" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.3 1.74415C11.3 2.70751 10.5192 3.48904 9.55506 3.48904C8.5917 3.48904 7.81091 2.70751 7.81091 1.74415C7.81091 0.780788 8.5917 0 9.55506 0C10.5192 0 11.3 0.780788 11.3 1.74415" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.28875 2.74322C5.96933 3.42455 5.96933 4.52893 5.28875 5.21019C4.60743 5.89152 3.50305 5.89152 2.82178 5.21019C2.14046 4.52887 2.14046 3.42449 2.82178 2.74322C3.50311 2.06264 4.60748 2.06264 5.28875 2.74322Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.74415 7.7002C2.70751 7.7002 3.48904 8.48098 3.48904 9.44508C3.48904 10.4084 2.70751 11.1892 1.74415 11.1892C0.780788 11.1892 0 10.4084 0 9.44508C0 8.48098 0.780788 7.7002 1.74415 7.7002" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2.74322 13.7112C3.42455 13.0307 4.52893 13.0307 5.21019 13.7112C5.89151 14.3926 5.89151 15.4969 5.21019 16.1782C4.52887 16.8595 3.42449 16.8595 2.74322 16.1782C2.06264 15.4969 2.06264 14.3925 2.74322 13.7112Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.1892 17.2559C11.1892 18.2192 10.4084 19 9.44508 19C8.48098 19 7.7002 18.2192 7.7002 17.2559C7.7002 16.2925 8.48098 15.511 9.44508 15.511C10.4084 15.511 11.1892 16.2925 11.1892 17.2559" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.7111 16.2568C13.0305 15.5754 13.0305 14.4711 13.7111 13.7898C14.3924 13.1085 15.4968 13.1085 16.1781 13.7898C16.8594 14.4711 16.8594 15.5755 16.1781 16.2568C15.4968 16.9374 14.3924 16.9374 13.7111 16.2568Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.2559 11.2999C16.2925 11.2999 15.511 10.5192 15.511 9.55506C15.511 8.5917 16.2925 7.81091 17.2559 7.81091C18.2192 7.81091 19 8.5917 19 9.55506C19 10.5192 18.2192 11.2999 17.2559 11.2999Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.2568 5.28887C15.5754 5.96945 14.4711 5.96945 13.7898 5.28887C13.1085 4.60755 13.1085 3.50317 13.7898 2.82191C14.4711 2.14058 15.5755 2.14058 16.2568 2.82191C16.9373 3.50323 16.9373 4.60761 16.2568 5.28887Z" />
+                    </svg>
+
+
+                    <button class="nav__hamburger">
+                        <svg class="header__burger" id="burger" width="40" height="40" viewBox="0 0 40 40"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.5 12.5C9.5 11.6703 10.1703 11 11 11H29C29.8297 11 30.5 11.6703 30.5 12.5C30.5 13.3297 29.8297 14 29 14H11C10.1703 14 9.5 13.3297 9.5 12.5ZM9.5 20C9.5 19.1703 10.1703 18.5 11 18.5H29C29.8297 18.5 30.5 19.1703 30.5 20C30.5 20.8297 29.8297 21.5 29 21.5H11C10.1703 21.5 9.5 20.8297 9.5 20ZM30.5 27.5C30.5 28.3297 29.8297 29 29 29H11C10.1703 29 9.5 28.3297 9.5 27.5C9.5 26.6703 10.1703 26 11 26H29C29.8297 26 30.5 26.6703 30.5 27.5Z" />
+                        </svg>
+                    </button>
+    
+    
+                    <svg class="nav__cross" id="cross" width="40" height="40" viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M29.4125 13.4125C30.1938 12.6313 30.1938 11.3625 29.4125 10.5813C28.6313 9.80005 27.3625 9.80005 26.5813 10.5813L20 17.1688L13.4125 10.5875C12.6313 9.8063 11.3625 9.8063 10.5813 10.5875C9.80005 11.3688 9.80005 12.6375 10.5813 13.4188L17.1688 20L10.5875 26.5875C9.8063 27.3688 9.8063 28.6376 10.5875 29.4188C11.3688 30.2001 12.6375 30.2001 13.4188 29.4188L20 22.8313L26.5875 29.4125C27.3688 30.1938 28.6376 30.1938 29.4188 29.4125C30.2001 28.6313 30.2001 27.3625 29.4188 26.5813L22.8313 20L29.4125 13.4125Z" />
+                    </svg>
+                </button>
+                </div>
+                
+
+                <ul class="nav__list" id="nav__list">
+                    <li class="nav__item"><a href="/index.html" class="nav__link" aria-current="page"><span class="nav__hash" aria-hidden="true">#</span>home</a>
+                    </li>
+                    <li class="nav__item"><a href="/works.html" class="nav__link"><span
+                                class="nav__hash" aria-hidden="true">#</span>works</a></li>
+                    <li class="nav__item"><a href="/about.html" class="nav__link"><span
+                                class="nav__hash" aria-hidden="true">#</span>about-me</a></li>
+                    <li class="nav__item"><a href="/contact.html" class="nav__link"><span
+                                class="nav__hash" aria-hidden="true">#</span>contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="block" role="region" aria-labelledby="contact-title">
+            <h1 id="contact-title" class="block__title"><span class="block__dash">/</span>contact</h1>
+            <p class="block__text">Who am I?</p>
+
+            <div class="block__container">
+                <p class="block__description">
+                    I’m interested in workplace opportunities. However, if you have other requests or questions, don’t hesitate to contact me.
+                </p>
+                
+                <div class="block__container-left">
+                    <p class="block__title">Message me here</p>
+
+                    <ul class="block__social-list">
+                        <li class="block__social-item"><a class="block__social-link" href="https://www.linkedin.com/in/eros-ferri-9115aa358/" target="_blank" aria-label="Visit my linkedin profile">Linkedin</a></li>
+                        <li class="block__social-item"><a class="block__social-link" href="https://github.com/kugayumasan" target="_blank" aria-label="Visit my github profile">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <button id="openPopup" class="btn">Contactformulier openen</button>
+
+        <form class="form" popup id="contactPopup" popover="auto">
+            <h2>Contactformulier</h2>
+
+            <label class="form__group">
+                <span class="form__label">Name</span>
+                <input class="form__input" type="text" name="name" required>
+            </label>
+
+            <label class="form__group">
+                <span class="form__label">Email</span>
+                <input class="form__input" type="email" name="email" required>
+            </label>
+
+            <label class="form__group">
+                <span class="form__label">Title</span>
+                <input class="form__input" type="text" name="title" required>
+            </label>
+
+            <label class="form__group">
+                <span class="form__label">Message</span>
+                <textarea class="form__input" name="message" rows="3"></textarea>
+            </label>
+
+            <div class="form__actions">
+                <button type="submit" class="btn">Verstuur</button>
+                <button class="btn btn-secondary" popovertarget="contactPopup" popovertargetaction="hide">Annuleren</button>
+            </div>
+        </form>
+    </main>
+
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__left-right">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img src="/images/logo-header.png" alt="Logo" class="nav__logo-icon" width="40" height="40">
+                    <span class="footer__name">Coder</span>
+                </div>
+                <a href="mailto:erosferri@hotmail.com" class="footer__email">erosferri@hotmail.com</a>
+                <p class="footer__description">Back-end and front-end developer</p>
+            </div>
+    
+            <div class="footer__right">
+                <h3 class="footer__media-title" id="social-media-heading">Media</h3>
+                <ul class="footer__social-list" aria-labelledby="social-media-heading">
+                    <li class="footer__social-item"><a class="footer__social-link" href="https://github.com/kugayumasan" target="_blank" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                    <li class="footer__social-item"><a class="footer__social-link" href="https://www.linkedin.com/in/eros-ferri-9115aa358/" target="_blank" aria-label="Linkedin profile"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            © Copyright 2025. Made by Eros Ferri
+        </div>
+    </footer>
+
+    <script src="./js/theme.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/burger.js"></script>
+
+</body>
